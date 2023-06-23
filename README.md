@@ -74,14 +74,14 @@ Request Body dla kolejnych przedmiotów:
 
 ## Pobranie wszystkich przedmiotów:
 
-Metoda: GET
-Adres zasobu: http://localhost:8080/api/zajecia
-Nagłówki: Content-Type: application/json
-Request Body: brak
+Metoda: GET  
+Adres zasobu: http://localhost:8080/api/zajecia  
+Nagłówki: Content-Type: application/json  
+Request Body: brak  
 
-Odpowiedź:
-HTTP Code: 200 OK
-Body: 
+Odpowiedź:  
+HTTP Code: 200 OK  
+Body:   
 
   {
     "id": 1,
@@ -89,54 +89,54 @@ Body:
     "ECTS": 2,
     "sala": 216,
     "egzamin": true
-  },
+  },  
   {
     "id": 2,
     "nazwa": "Testowanie oprogramowania",
     "ECTS": 1,
     "sala": 216,
     "egzamin": false
-  },
+  },  
   {
     "id": 3,
     "nazwa": "Technologie i aplikacje webowe",
     "ECTS": 3,
     "sala": 208,
     "egzamin": false
-  },
+  },  
   {
     "id": 4,
     "nazwa": "Zarządzanie projektem informatycznym",
     "ECTS": 2,
     "sala": 216,
     "egzamin": false
-  },
+  },  
   {
     "id": 5,
     "nazwa": "Zaawansowane technologie bazodanowe",
     "ECTS": 3,
     "sala": 208,
     "egzamin": false
-  },
+  },  
   {
     "id": 6,
     "nazwa": "Technologie komponentowe i sieciowe",
     "ECTS": 2,
     "sala": 208,
     "egzamin": true
-  }
+  }  
 
 
 ## Pobranie przedmiotów, któer mają egzamin:
 
-Metoda: GET
-Adres zasobu: http://localhost:8080/api/zajecia?exam=true
-Nagłówki: Content-Type: application/json
-Request Body: brak
+Metoda: GET  
+Adres zasobu: http://localhost:8080/api/zajecia?exam=true  
+Nagłówki: Content-Type: application/json  
+Request Body: brak  
 
-Odpowiedź:
-HTTP Code: 200 OK
-Body: 
+Odpowiedź:  
+HTTP Code: 200 OK  
+Body:   
 
   {
     "id": 1,
@@ -144,26 +144,26 @@ Body:
     "ECTS": 2,
     "sala": 216,
     "egzamin": true
-  },
+  },  
   {
     "id": 6,
     "nazwa": "Technologie komponentowe i sieciowe",
     "ECTS": 2,
     "sala": 208,
     "egzamin": true
-  }
+  }  
 
 
 ## Pobranie przedmiotów, które odbywają się w sali 216:
 
-Metoda: GET
-Adres zasobu: http://localhost:8080/api/zajecia?room=216
-Nagłówki: Content-Type: application/json
-Request Body: brak
+Metoda: GET  
+Adres zasobu: http://localhost:8080/api/zajecia?room=216  
+Nagłówki: Content-Type: application/json  
+Request Body: brak  
 
-Odpowiedź:
-HTTP Code: 200 OK
-Body: 
+Odpowiedź:  
+HTTP Code: 200 OK  
+Body:   
 
   {
     "id": 1,
@@ -171,154 +171,154 @@ Body:
     "ECTS": 2,
     "sala": 216,
     "egzamin": true
-  },
+  },  
   {
     "id": 2,
     "nazwa": "Testowanie oprogramowania",
     "ECTS": 1,
     "sala": 216,
     "egzamin": false
-  },
+  },  
   {
     "id": 4,
     "nazwa": "Zarządzanie projektem informatycznym",
     "ECTS": 2,
     "sala": 216,
     "egzamin": false
-  }
+  }  
 
 
 ## Pobranie przedmiotów które nie mają egzaminu i odbywają się w sali 208:
 
-Metoda: GET
-Adres zasobu: http://localhost:8080/api/zajecia?room=208&exam=false
-Nagłówki: Content-Type: application/json
-Request Body: brak
+Metoda: GET  
+Adres zasobu: http://localhost:8080/api/zajecia?room=208&exam=false  
+Nagłówki: Content-Type: application/json  
+Request Body: brak  
 
-Odpowiedź:
-HTTP Code: 200 OK
-Body: 
-[
+Odpowiedź:  
+HTTP Code: 200 OK  
+Body:   
+
   {
     "id": 3,
     "nazwa": "Technologie i aplikacje webowe",
     "ECTS": 3,
     "sala": 208,
     "egzamin": false
-  },
+  },  
   {
     "id": 5,
     "nazwa": "Zaawansowane technologie bazodanowe",
     "ECTS": 3,
     "sala": 208,
     "egzamin": false
-  }
-]
+  }  
+
 
 ## Pobranie przedmiotu o identyfikatorze 3:
 
-Metoda: GET
-Adres zasobu: http://localhost:8080/api/zajecia/3
-Nagłówki: Content-Type: application/json
-Request Body: brak
+Metoda: GET  
+Adres zasobu: http://localhost:8080/api/zajecia/3  
+Nagłówki: Content-Type: application/json  
+Request Body: brak  
 
-Odpowiedź:
-HTTP Code: 200 OK
-Body: 
+Odpowiedź:  
+HTTP Code: 200 OK  
+Body:   
 {
   "id": 3,
   "nazwa": "Technologie i aplikacje webowe",
   "ECTS": 3,
   "sala": 208,
   "egzamin": false
-}
+}  
 
 ## Pobranie przedmiotu o identyfikatorze 15:
 
-Metoda: GET
-Adres zasobu: http://localhost:8080/api/zajecia/15
-Nagłówki: Content-Type: application/json
-Request Body: brak
+Metoda: GET  
+Adres zasobu: http://localhost:8080/api/zajecia/15  
+Nagłówki: Content-Type: application/json  
+Request Body: brak  
 
-Odpowiedź:
-HTTP Code: 404
-Body: brak
+Odpowiedź:  
+HTTP Code: 404  
+Body: brak  
 
 ## Usunięcie przedmiotu o indentyfikatorze 2:
 
-Metoda: DELETE
-Adres zasobu: http://localhost:8080/api/zajecia/2
-Nagłówki: Content-Type: application/json
-Request Body: brak
+Metoda: DELETE  
+Adres zasobu: http://localhost:8080/api/zajecia/2  
+Nagłówki: Content-Type: application/json  
+Request Body: brak  
 
-Odpowiedź:
-HTTP Code: 204
-Body: brak
+Odpowiedź:  
+HTTP Code: 204  
+Body: brak  
 
 ## Pobranie wszystkich przedmiotów:
 
-Metoda: GET
-Adres zasobu: http://localhost:8080/api/zajecia
-Nagłówki: Content-Type: application/json
-Request Body: brak
+Metoda: GET  
+Adres zasobu: http://localhost:8080/api/zajecia  
+Nagłówki: Content-Type: application/json  
+Request Body: brak  
 
-Odpowiedź:
-HTTP Code: 200 OK
-Body: 
+Odpowiedź:  
+HTTP Code: 200 OK  
+Body:   
 {
     "id": 1,
     "nazwa": "Metodologie obiektowe",
     "ECTS": 2,
     "sala": 216,
     "egzamin": true
-  },
+  },  
   {
     "id": 3,
     "nazwa": "Technologie i aplikacje webowe",
     "ECTS": 3,
     "sala": 208,
     "egzamin": false
-  },
+  },  
   {
     "id": 4,
     "nazwa": "Zarządzanie projektem informatycznym",
     "ECTS": 2,
     "sala": 216,
     "egzamin": false
-  },
+  },  
   {
     "id": 5,
     "nazwa": "Zaawansowane technologie bazodanowe",
     "ECTS": 3,
     "sala": 208,
     "egzamin": false
-  },
+  },  
   {
     "id": 6,
     "nazwa": "Technologie komponentowe i sieciowe",
     "ECTS": 2,
     "sala": 208,
     "egzamin": true
-  }
+  }  
   
 ## Usunięcie wszystkich przedmiotów:
   
-Metoda: DELETE
-Adres zasobu: http://localhost:8080/api/zajecia
-Nagłówki: Content-Type: application/json
-Request Body: brak
+Metoda: DELETE  
+Adres zasobu: http://localhost:8080/api/zajecia  
+Nagłówki: Content-Type: application/json  
+Request Body: brak  
 
-Odpowiedź:
-HTTP Code: 200
-Body: brak
+Odpowiedź:  
+HTTP Code: 200  
+Body: brak  
 
 ## Pobranie wszystkich przedmiotów:
 
-Metoda: GET
-Adres zasobu: http://localhost:8080/api/zajecia
-Nagłówki: Content-Type: application/json
-Request Body: brak
+Metoda: GET  
+Adres zasobu: http://localhost:8080/api/zajecia  
+Nagłówki: Content-Type: application/json  
+Request Body: brak  
 
-Odpowiedź:
-HTTP Code: 200 OK
-Body: []
+Odpowiedź:  
+HTTP Code: 200 OK  
+Body: []  
