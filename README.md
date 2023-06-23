@@ -1,6 +1,6 @@
 # taw
 
-#Wymagania
+# Wymagania
 
 Warunkiem zaliczenia jest przygotowanie aplikacji serwerowej opartej o REST API oraz raportu komunikacji z tym serwerem według podanego scenariusza.
 Raport komunikacji z serwerem powinien zawierać zestawienie wywołanych żądań do serwera wraz z adresem zasobu, metodą http, body żądania, 
@@ -33,7 +33,7 @@ o tym czy przedmiot kończy się egzaminem oraz o filtrację po numerze sali, w 
 powinien także udostępniać możliwość pobierania konkretnego zasobu w oparciu o identyfikator oraz usuwanie konkretnego 
 przedmiotu w oparciu o identyfikator.
 
-#Scenariusz do raportu
+# Scenariusz do raportu
 
 1. Wprowadzenie przedmiotów do systemu w podanej kolejności:
 - Nazwa: Metodologie obiektowe, ECTS: 2, Sala: 216, Egzamin: tak,
@@ -53,26 +53,26 @@ przedmiotu w oparciu o identyfikator.
 10. Usunięcie wszystkich przedmiotów,
 11. Pobranie wszystkich przedmiotów.
 
-##Wprowadzenie przedmiotów do systemu:
+## Wprowadzenie przedmiotów do systemu:
 
 Metoda: POST
-Adres zasobu: http://localhost:8080/api/zajecia
-Nagłówki: Content-Type: application/json
-Request Body:
-{"nazwa":"Metodologie Obiektowe", "ects":2, "sala":"216", "egzamin":"true"}
+Adres zasobu: http://localhost:8080/api/zajecia  
+Nagłówki: Content-Type: application/json  
+Request Body:  
+{"nazwa":"Metodologie Obiektowe", "ects":2, "sala":"216", "egzamin":"true"}  
 
-Odpowiedź:
-HTTP Code: 200 OK
-Body: brak
+Odpowiedź:  
+HTTP Code: 200 OK  
+Body: brak  
 
-Request Body dla kolejnych przedmiotów:
-{"nazwa":"Testowanie oprogramowania", "ects":1, "sala":"216", "egzamin":"false"}
-{"nazwa":"Technologie i aplikacje webowe", "ects":3, "sala":"208", "egzamin":"false"}
-{"nazwa":"Zarządzanie projektem informatycznym", "ects":2, "sala":"216", "egzamin":"false"}
-{"nazwa":"Zaawansowane technologie bazodanowe", "ects":3, "sala":"208", "egzamin":"false"}
-{"nazwa":"Technologie komponentowe i sieciowe", "ects":2, "sala":"208", "egzamin":"true"}
+Request Body dla kolejnych przedmiotów:  
+{"nazwa":"Testowanie oprogramowania", "ects":1, "sala":"216", "egzamin":"false"}  
+{"nazwa":"Technologie i aplikacje webowe", "ects":3, "sala":"208", "egzamin":"false"}  
+{"nazwa":"Zarządzanie projektem informatycznym", "ects":2, "sala":"216", "egzamin":"false"}  
+{"nazwa":"Zaawansowane technologie bazodanowe", "ects":3, "sala":"208", "egzamin":"false"}  
+{"nazwa":"Technologie komponentowe i sieciowe", "ects":2, "sala":"208", "egzamin":"true"}  
 
-##Pobranie wszystkich przedmiotów:
+## Pobranie wszystkich przedmiotów:
 
 Metoda: GET
 Adres zasobu: http://localhost:8080/api/zajecia
@@ -127,7 +127,7 @@ Body:
   }
 
 
-##Pobranie przedmiotów, któer mają egzamin:
+## Pobranie przedmiotów, któer mają egzamin:
 
 Metoda: GET
 Adres zasobu: http://localhost:8080/api/zajecia?exam=true
@@ -154,7 +154,7 @@ Body:
   }
 
 
-##Pobranie przedmiotów, które odbywają się w sali 216:
+## Pobranie przedmiotów, które odbywają się w sali 216:
 
 Metoda: GET
 Adres zasobu: http://localhost:8080/api/zajecia?room=216
@@ -188,7 +188,7 @@ Body:
   }
 
 
-##Pobranie przedmiotów które nie mają egzaminu i odbywają się w sali 208:
+## Pobranie przedmiotów które nie mają egzaminu i odbywają się w sali 208:
 
 Metoda: GET
 Adres zasobu: http://localhost:8080/api/zajecia?room=208&exam=false
@@ -215,7 +215,7 @@ Body:
   }
 ]
 
-##Pobranie przedmiotu o identyfikatorze 3:
+## Pobranie przedmiotu o identyfikatorze 3:
 
 Metoda: GET
 Adres zasobu: http://localhost:8080/api/zajecia/3
@@ -233,7 +233,7 @@ Body:
   "egzamin": false
 }
 
-##Pobranie przedmiotu o identyfikatorze 15:
+## Pobranie przedmiotu o identyfikatorze 15:
 
 Metoda: GET
 Adres zasobu: http://localhost:8080/api/zajecia/15
@@ -244,7 +244,7 @@ Odpowiedź:
 HTTP Code: 404
 Body: brak
 
-##Usunięcie przedmiotu o indentyfikatorze 2:
+## Usunięcie przedmiotu o indentyfikatorze 2:
 
 Metoda: DELETE
 Adres zasobu: http://localhost:8080/api/zajecia/2
@@ -255,7 +255,7 @@ Odpowiedź:
 HTTP Code: 204
 Body: brak
 
-##Pobranie wszystkich przedmiotów:
+## Pobranie wszystkich przedmiotów:
 
 Metoda: GET
 Adres zasobu: http://localhost:8080/api/zajecia
@@ -312,7 +312,7 @@ Odpowiedź:
 HTTP Code: 200
 Body: brak
 
-##Pobranie wszystkich przedmiotów:
+## Pobranie wszystkich przedmiotów:
 
 Metoda: GET
 Adres zasobu: http://localhost:8080/api/zajecia
